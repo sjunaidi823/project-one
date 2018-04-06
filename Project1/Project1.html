@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Project1.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Fredoka+One" rel="stylesheet">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-SDEGkgZpSW95TqzcfZabrwgujVErrTI&callback=initMap">
+    </script>
+</head>
+
+<body id="pageColor">
+    <script src="Project1.js"></script>
+
+    <div id="pageColor">
+        <!-- Navbar -->
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active navColor" href="#">BLANK</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navColor" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navColor" href="#">Contact</a>
+            </li>
+        </ul>
+        <!-- Logo -->
+        <div class="jumbotron mx-auto jumbotron-fluid logo " style="width: 800px;">
+            <div class="container justify-content-end">
+                <h1 class="display-4 text-center">LOGO GOES HERE</h1>
+            </div>
+        </div>
+        <!-- Search Bar -->
+    </div>
+    <div>
+        <form class="form-group mx-auto row" style="width: 700px;">
+            <div class="col-12 col-md-10">
+                <label for="foodSearch" id="searchBar"></label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+            </div>
+            <br>
+            <div class="col-6 col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary mx-auto button" style="width: 85px;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <div class="jumbotron jumbotron-fluid mx-auto mainDropDown" style="width:800px;">
+            <div class="container">
+                <!--
+                <div>
+                    <div class="card-header dropDownHeader style1">
+                        RESULTS 
+                    </div>
+                </div>
+            -->
+                <div class="card row" id="dropDown">
+                    <div class="card-header style1" id="truckName">
+                        Name of Food Place
+                    </div>
+                    <div class="card-body styleBox">
+                            <div id="map" class="">
+
+                                </div>
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p id="timeOpen">Opens:</p>
+                        <p id="timeCloses">Closes:</p>
+                        <p id="rating">Rating :</p>
+
+                        <p id="address">Address :</p>
+ 
+                        <button type="button" class="btn btn-primary" id="locationButton">Primary</button>
+
+                    </div>
+
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
