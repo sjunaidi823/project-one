@@ -1,3 +1,103 @@
+var pizza = [
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    }
+
+];
+
+var hotdogs = [
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    }
+];
+
+var trucks = [
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    },
+    {
+        name:"",
+        Location: "",
+        foods: [""],
+        prices: [""],
+    }
+];
+
 $(document).ready(function () {
     $("#locationButton").on("click", initMap)
     function initMap() {
