@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Fredoka+One" rel="stylesheet">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-SDEGkgZpSW95TqzcfZabrwgujVErrTI&callback=initMap">
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="pageColor">
@@ -40,21 +41,39 @@
         <!-- Search Bar -->
     </div>
     <div>
-        <form class="form-group mx-auto row" style="width: 700px;">
+        </form>
+
+        <form action="/action_page.php" method="get" class="form-group mx-auto row" style="width: 700px;">
             <div class="col-12 col-md-10">
                 <label for="foodSearch" id="searchBar"></label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                        <option value="Firefox">
+                            <option value="Chrome">
+                                <option value="Opera">
+                                    <option value="Safari">
+                </datalist>
+                <input type="text" list="browsers" name="browser" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                <div id="test">
+                    <select id="article-count">
+
+                        <option value="5"></option>
+
+                    </select>
+
+                </div>
             </div>
             <br>
             <div class="col-6 col-md-2 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary mx-auto button" style="width: 85px;">Submit</button>
+                <button type="button" class="btn btn-primary mx-auto" id="submitButton" style="width: 85px;">Submit</button>
+
             </div>
         </form>
     </div>
 
     <div>
         <div class="jumbotron jumbotron-fluid mx-auto mainDropDown" style="width:800px;">
-            <div class="container">
+            <div class="container results">
                 <!--
                 <div>
                     <div class="card-header dropDownHeader style1">
@@ -62,21 +81,34 @@
                     </div>
                 </div>
             -->
-                <div class="card row" id="dropDown">
+                <div class="card row" id="dropDownf">
                     <div class="card-header style1" id="truckName">
                         Name of Food Place
                     </div>
                     <div class="card-body styleBox">
-                            <div id="map" class="">
+                        <div id="map" class="">
 
-                                </div>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p id="timeOpen">Opens:</p>
-                        <p id="timeCloses">Closes:</p>
-                        <p id="rating">Rating :</p>
+                        </div>
+                        <div class="rating">
+                            <span class="card-title">RATING</span>
 
-                        <p id="address">Address :</p>
- 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                        </div>
+                        <br>
+                        <div class="item">
+                                Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. 
+                            </div>
+                        <br>
+                        <p id="timeOpen" class="styleBox">Opens:--------- Closes:--------- </p>
+                        <!--     <p id="timeCloses">Closes:</p>     -->
+
+
+                        <p id="address" class="styleBox">Address :</p>
+
                         <button type="button" class="btn btn-primary" id="locationButton">Primary</button>
 
                     </div>
