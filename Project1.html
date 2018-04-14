@@ -14,112 +14,134 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-SDEGkgZpSW95TqzcfZabrwgujVErrTI&callback=initMap">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+
 </head>
 
 <body id="pageColor">
+
     <script src="Project1.js"></script>
 
     <div id="pageColor">
-        <!-- Navbar -->
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active navColor" href="#">BLANK</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link navColor" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link navColor" href="#">Contact</a>
-            </li>
-        </ul>
+
         <!-- Logo -->
-        <div class="jumbotron mx-auto jumbotron-fluid logo " style="width: 800px;">
+        <div class="jumbotron mx-auto jumbotron-fluid logo " style="width: 700px;">
             <div class="container justify-content-end">
-                <h1 class="display-4 text-center">LOGO GOES HERE</h1>
+                <h1 class="display-4 text-center">FOOD SPOT</h1>
             </div>
         </div>
         <!-- Search Bar -->
     </div>
-    <div>
-        </form>
+    </form>
+    <form action="/action_page.php" method="get" class="form-group mx-auto row" style="width: 700px;">
+        <div class="col-12 col-md-10">
+            <label for="foodSearch" id="food"></label>
+            <datalist id="foods">
+                <option value="food trucks">
+                    <option value="hotdogs">
+                        <option value="pizzas">
+                            <option value="steaks">
 
-        <form action="/action_page.php" method="get" class="form-group mx-auto row" style="width: 700px;">
-            <div class="col-12 col-md-10">
-                <label for="foodSearch" id="searchBar"></label>
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                        <option value="Firefox">
-                            <option value="Chrome">
-                                <option value="Opera">
-                                    <option value="Safari">
-                </datalist>
-                <input type="text" list="browsers" name="browser" class="form-control" id="exampleFormControlInput1" placeholder="Search">
-                <div id="test">
-                    <select id="article-count">
-
-                        <option value="5"></option>
-
-                    </select>
-
-                </div>
-            </div>
-            <br>
-            <div class="col-6 col-md-2 d-flex align-items-end">
-                <button type="button" class="btn btn-primary mx-auto" id="submitButton" style="width: 85px;">Submit</button>
-
-            </div>
-        </form>
-    </div>
-
-    <div>
-        <div class="jumbotron jumbotron-fluid mx-auto mainDropDown" style="width:800px;">
-            <div class="container results">
-                <!--
-                <div>
-                    <div class="card-header dropDownHeader style1">
-                        RESULTS 
-                    </div>
-                </div>
-            -->
-                <div class="card row" id="dropDownf">
-                    <div class="card-header style1" id="truckName">
-                        Name of Food Place
-                    </div>
-                    <div class="card-body styleBox">
-                        <div id="map" class="">
-
-                        </div>
-                        <div class="rating">
-                            <span class="card-title">RATING</span>
-
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star unchecked"></span>
-                            <span class="fa fa-star unchecked"></span>
-                        </div>
-                        <br>
-                        <div class="item">
-                                Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. Text goes in here. 
-                            </div>
-                        <br>
-                        <p id="timeOpen" class="styleBox">Opens:--------- Closes:--------- </p>
-                        <!--     <p id="timeCloses">Closes:</p>     -->
-
-
-                        <p id="address" class="styleBox">Address :</p>
-
-                        <button type="button" class="btn btn-primary" id="locationButton">Primary</button>
-
-                    </div>
-
-                </div>
-                <br>
-
+            </datalist>
+            <input type="text" list="foods" name="browser" class="form-control" id="foodSearch" placeholder="Search">
+            <div id="test">
+                <select id="article-count">
+                    <option value="5"></option>
+                </select>
             </div>
         </div>
-    </div>
+        <br>
+        <div class="col-6 col-md-2 d-flex align-items-end">
+            <button type="button" class="btn btn-primary mx-auto" id="submitButton" style="width: 85px;">Submit</button>
+            <br>
+            <button type="button" class="btn btn-secondary mx-auto" id="clearButton" style="width: 85px;">Clear</button>
 
+
+            <!-- Modal HTML embedded directly into document -->
+            <div id="ex1" class="modal">
+                <p>Truck's Location</p>
+                <div id="map"></div>
+
+            </div>
+
+            <!-- Link to open the modal -->
+
+            <button type="button" class="btn btn-primary mx-auto" id="locationButton" style="width: 120px;">
+                <a href="#ex1" rel="modal:open" id="text1">Show Location</a>
+            </button>
+
+        </div>
+
+
+    </form>
+    <button type="button" class="btn btn-primary mx-auto gifButton1" data-food="food-truck">
+        Food Truck
+    </button>
+    <button type="button" class="btn btn-primary mx-auto gifButton2" data-food="pizzas">
+        Pizza
+    </button>
+    <button type="button" class="btn btn-primary mx-auto gifButton3" data-food="hotdog">
+        Hotdog
+    </button>
+    <button type="button" class="btn btn-primary mx-auto gifButton4" data-food="steaks">
+        Steak
+    </button>
+
+    <div id="gifs-appear-here">
+    </div>
+    <!-- <div>
+        <button id="pizza">Search</button>
+        Search item:
+        <input type="text" list="foods" name="item" class="form-control" id="searchItem" placeholder="enter search item">
+        <br>
+        <div id="subject"></div>
+    </div> -->
+    <div>
+        <div class="jumbotron jumbotron-fluid mx-auto mainDropDown" style="width:800px;">
+            <div class="container results" id="dropDown">
+
+                <!-- <div class="card row" id="dropDown"> -->
+
+                <!-- <div class="card-header style1" id="truckName">
+                        </div> -->
+                <!-- <div class="card-body styleBox"> -->
+
+
+                <!-- <div class="rating">
+                                <span class="card-title">RATING</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div> 
+                <br> -->
+                <!-- <div>
+                    <h4 id="name"></h4>
+                </div>
+                <div>
+                    <h5 id="review"></h5>
+                </div> -->
+                <!-- -------------MENU-------------
+                            <div id="typesOfFoods"></div>--------------------------------
+                            <br>
+                            <p id="time" class="styleBox"></p>
+                            <!--     <p id="timeCloses">Closes:</p>     -->
+                <!-- <p id="address" class="styleBox">Address :</p> -->
+
+                <!-- </div> -->
+                <!-- </div> -->
+
+            </div>
+
+
+        </div>
+    </div>
 </body>
 
 </html>
