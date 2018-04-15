@@ -1,0 +1,65 @@
+.logo {
+    width: 75%;
+    background: rgba(139, 0, 0, 0.582);
+    border: 7px solid rgba(221, 166, 16, 0.836);
+    font-family: 'Fascinate Inline', cursive;
+    color: rgba(221, 166, 16, 0.836);
+    font-size: 500px;
+ 
+ }
+ #pageColor {
+    background:rgb(83, 8, 8);
+ }
+ .navColor {
+    color: rgb(201, 201, 73);
+ }
+ .mainDropDown {
+    background: rgba(139, 0, 0, 0.582);
+    border: 7px solid rgba(221, 166, 16, 0.836);
+ }
+ #seacrhBar {
+    border: 7px solid rgba(221, 166, 16, 0.836);
+    width: 75%;
+ 
+ }
+ .dropDownHeader {
+    background:rgb(83, 8, 8);
+ 
+ }
+ .style1 {
+    color: rgb(201, 201, 73);
+    font-size: 20px;
+    background: rgb(83, 8, 8);
+    border: 5px;
+    font-family: 'Fredoka One', cursive;
+ 
+ }
+ #style2 {
+    color: rgb(185, 118, 41);
+ }
+ .styleBox {
+    background: rgb(133, 26, 26);
+    color: rgb(235, 145, 44);
+    font-weight: bold;
+ 
+ }
+ #map {
+    margin: 10px 5px;
+    height: 227px;
+    width: 100%;
+    position: fixed;
+    resize: both;
+ }
+ 
+ .rating {
+    font-size: 20px;
+ }
+ .checked {
+    color: orange;
+ }
+ .unchecked {
+     color: black;
+ }
+ #text1 {
+    color: white;
+ }
