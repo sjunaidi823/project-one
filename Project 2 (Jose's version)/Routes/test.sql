@@ -1,0 +1,8 @@
+-- CREATE TABLE trucks (
+-- 	item_id integer(11) auto_increment not null,
+--     truck_name VARCHAR(60),
+--     truck_type VARCHAR(30),
+--     truck_location varchar(60),
+--     rating DECIMAL(4,2),
+-- 	primary key (item_id),
+-- );

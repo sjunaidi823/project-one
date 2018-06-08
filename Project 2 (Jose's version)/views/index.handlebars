@@ -1,0 +1,148 @@
+<!-- NAV BAR -->
+
+<nav class="deep-orange accent-3" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a href="login.html">Log-In |</a>
+      </li>
+
+      <li>
+        <a href="signup.html">Sign-up! |</a>
+      </li>
+    </ul>
+
+   
+  </div>
+</nav>
+
+<!-- Header -->
+
+<div class="section no-pad-bot deep-orange accent-2" id="index-banner">
+  <div class="container">
+    <br>
+    <br>
+    <h1 class="header center white-text">Food Is One Click Away!</h1>
+    <div class="container">
+      <div class="col s4 center">
+        <a class='dropdown-trigger  btn center' href='#' data-target='dropdown1'>What do you want?</a>
+        <!-- Dropdown Menu for Type of Food -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li>
+            <a data-value="hotdog">
+              <i class="material-icons">hot_tub</i>hotdog</a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+
+          <li>
+            <a data-value="truck">
+              <i class="material-icons">local_shipping</i>food Truck
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a data-value="pizza">
+              <i class="material-icons">local_pizza</i>pizza</a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a data-value="icecream">
+              <i class="material-icons">cloud</i>ice cream</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Second Button for stationary or none stationary -->
+      {{!--
+      <div class="col s4">
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Drop Me!</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown2' class='dropdown-content'>
+          <li>
+            <a value="steady">Steady Location</a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a value="mobile">Mobile Locations</a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a value="event">Events Only</a>
+          </li>
+        </ul>
+      </div>
+    </div> --}} {{!--
+    <div class="row center">
+
+      <form class="form-inline">
+        <input id="userSearch" name="userInput" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn-large" id="test" type="submit">Search</button>
+      </form>
+    </div> --}}
+
+    <br>
+    <br>
+    <br>
+
+
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="orange lighten-5">
+  <div class="container orange lighten-5">
+    <div class="section orange lighten-5">
+
+      <!--   Icon Section   -->
+      <div class="row center">
+        <h1>Food Trucks</h1>
+
+        {{!--
+        <h2>All trucks</h2> --}}
+        <div class="jumbotron center">
+
+          <ul>
+            {{#each trucks}}
+            <p>Name: {{truck_name}}</p>
+            <p>Food type: {{truck_type}}</p>
+            <p>truck location: {{truck_location}}</p>
+            <form class="locationInput">
+              <button type="submit" id="locationButton">See location</button>
+            </form>
+            <hr> {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+
+      </div>
+
+    </div>
+
+  </div>
+  <br>
+  <br>
+</div>
+{{!--
+<ul>
+  {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
+</ul>
+
+<h2>Add a Cat</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Cat Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="slee">Sleepy?</label>
+    <br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!
+    <br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Cat</button>
+</form> --}}
